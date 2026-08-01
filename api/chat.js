@@ -1,19 +1,9 @@
-// API partagée — endpoint /api/chat
-// À réutiliser depuis toutes tes applications (Fagent, InterviewPrep AI, etc.)
-//
-// Variables d'environnement nécessaires sur Vercel :
-//   AI_API_KEY   -> ta clé du fournisseur IA (ex: clé Gemini)
-//   AI_ENDPOINT  -> https://generativelanguage.googleapis.com/v1beta/models
-//   AI_MODEL     -> ex: gemini-3.5-flash-lite
-//   APP_SECRET   -> une clé secrète que TOI seul choisis, pour protéger cette API
-
 module.exports = async (req, res) => {
   if (req.method !== "POST") {
     res.status(405).json({ error: "Méthode non autorisée, utilise POST." });
     return;
   }
 
-  // --- Vérification de la clé secrète envoyée par l'app appelante ---
   const providedSecret = req.headers["x-app-secret"];
   const expectedSecret = process.env.APP_SECRET;
 
