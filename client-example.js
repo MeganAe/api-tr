@@ -1,5 +1,3 @@
-
-
 const SHARED_API_URL = process.env.SHARED_API_URL || "https://ton-api.vercel.app/api/chat";
 const APP_SECRET = process.env.APP_SECRET;
 
