@@ -1,8 +1,4 @@
-// Client à copier dans chacune de tes apps (Fagent, InterviewPrep AI, etc.)
-// pour appeler l'API partagée. Ne mets JAMAIS APP_SECRET dans le code
-// front-end React/Vite exposé au navigateur : ce fichier est fait pour être
-// utilisé côté SERVEUR (ta propre fonction serverless), qui elle-même est
-// appelée par ton front-end. Voir README pour le schéma complet.
+
 
 const SHARED_API_URL = process.env.SHARED_API_URL || "https://ton-api.vercel.app/api/chat";
 const APP_SECRET = process.env.APP_SECRET;
